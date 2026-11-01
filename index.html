@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pak AI - Advanced Artificial Intelligence Agent</title>
     
-    <!-- CSS File Link -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,19 +20,17 @@
                 <img src="logo.png" alt="Pak AI Logo">
             </a>
             
-            <!-- Mobile Menu Icon -->
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
             </div>
 
-            <!-- Navigation Links -->
             <nav class="nav-links" id="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#features">Capabilities</a>
                 <a href="#founder">Founder</a>
-                <!-- Yahan Launch Agent ka link Privacy page par ja raha hai -->
-                <a href="privacy.html" class="btn-launch">Launch Agent</a>
+                <!-- Launch Agent now triggers the Popup -->
+                <a href="#" class="btn-launch" onclick="openTermsModal(event)">Launch Agent</a>
             </nav>
         </div>
     </header>
@@ -47,10 +43,9 @@
                 <h1>Pakistan's Most Advanced <br><span class="text-teal">AI Agent</span></h1>
                 <p>Empowering users with intelligent automation, seamless communication in Urdu & English, and enterprise-grade performance. Experience the future of artificial intelligence today.</p>
                 
-                <!-- Hero Buttons -->
                 <div class="hero-btns">
-                    <!-- Yahan Start Chatting ka link Privacy page par ja raha hai -->
-                    <a href="privacy.html" class="btn-primary">Start Chatting</a>
+                    <!-- Start Chatting now triggers the Popup -->
+                    <a href="#" class="btn-primary" onclick="openTermsModal(event)">Start Chatting</a>
                     <a href="#features" class="btn-secondary">Explore Features</a>
                 </div>
                 
@@ -61,7 +56,6 @@
                 </div>
             </div>
             
-            <!-- Hero Visual (Chat Mockup) -->
             <div class="hero-visual">
                 <div class="chat-mockup">
                     <div class="mockup-header">
@@ -170,7 +164,41 @@
         </div>
     </footer>
 
-    <!-- JS File Link -->
+    <!-- ========================================== -->
+    <!-- PROFESSIONAL TERMS & PRIVACY MODAL (POPUP) -->
+    <!-- ========================================== -->
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms & Privacy Agreement</h2>
+                <p>Please review and accept to continue to Pak AI.</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-scroll-box">
+                    <h3>1. AI Limitations</h3>
+                    <p>Pak AI is an advanced language model. While highly capable, it may occasionally generate inaccurate or incomplete information. You agree not to use Pak AI for critical medical, legal, or financial decisions without human verification.</p>
+                    
+                    <h3>2. Privacy & Data</h3>
+                    <p>Your prompts are processed securely. We do not sell your personal chat history to third parties. Data is processed solely to generate responses and improve system reliability. For full details, read our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
+                    
+                    <h3>3. Acceptable Use</h3>
+                    <p>You agree not to use Pak AI to generate harmful, illegal, or abusive content. We reserve the right to suspend accounts violating these terms. For full details, read our <a href="terms.html" target="_blank">Terms of Service</a>.</p>
+                </div>
+                
+                <div class="modal-checkbox">
+                    <input type="checkbox" id="agreeCheck" onchange="toggleAcceptBtn()">
+                    <label for="agreeCheck">I have read and agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a>.</label>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeTermsModal()">Cancel</button>
+                <button id="acceptBtn" class="btn-primary" disabled onclick="acceptAndProceed()">Accept & Continue</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
