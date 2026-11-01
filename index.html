@@ -164,41 +164,51 @@
         </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- PROFESSIONAL TERMS & PRIVACY MODAL (POPUP) -->
-    <!-- ========================================== -->
-    <div id="termsModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Terms & Privacy Agreement</h2>
-                <p>Please review and accept to continue to Pak AI.</p>
+    <!-- NAYA PREMIUM MODAL POPUP -->
+<div id="termsModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="ai-badge-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
-            
-            <div class="modal-body">
-                <div class="modal-scroll-box">
+            <h2>System Access & Privacy</h2>
+            <p>Please authorize the Pak AI Agent to begin.</p>
+        </div>
+        
+        <div class="modal-body">
+            <div class="modal-scroll-box">
+                <div class="policy-item">
                     <h3>1. AI Limitations</h3>
-                    <p>Pak AI is an advanced language model. While highly capable, it may occasionally generate inaccurate or incomplete information. You agree not to use Pak AI for critical medical, legal, or financial decisions without human verification.</p>
-                    
-                    <h3>2. Privacy & Data</h3>
-                    <p>Your prompts are processed securely. We do not sell your personal chat history to third parties. Data is processed solely to generate responses and improve system reliability. For full details, read our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
-                    
-                    <h3>3. Acceptable Use</h3>
-                    <p>You agree not to use Pak AI to generate harmful, illegal, or abusive content. We reserve the right to suspend accounts violating these terms. For full details, read our <a href="terms.html" target="_blank">Terms of Service</a>.</p>
+                    <p>Pak AI is an advanced language model. While highly capable, it may occasionally generate inaccurate information. Do not use for critical medical or legal decisions.</p>
                 </div>
-                
-                <div class="modal-checkbox">
-                    <input type="checkbox" id="agreeCheck" onchange="toggleAcceptBtn()">
-                    <label for="agreeCheck">I have read and agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a>.</label>
+                <div class="policy-item">
+                    <h3>2. Data Privacy</h3>
+                    <p>Your prompts are processed securely. We do not sell your personal chat history. Read our full <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
+                </div>
+                <div class="policy-item">
+                    <h3>3. Acceptable Use</h3>
+                    <p>You agree not to use Pak AI for generating harmful or illegal content. Read our full <a href="terms.html" target="_blank">Terms of Service</a>.</p>
                 </div>
             </div>
             
-            <div class="modal-footer">
-                <button class="btn-cancel" onclick="closeTermsModal()">Cancel</button>
-                <button id="acceptBtn" class="btn-primary" disabled onclick="acceptAndProceed()">Accept & Continue</button>
-            </div>
+            <!-- Custom Checkbox -->
+            <label class="custom-checkbox-container">
+                <input type="checkbox" id="agreeCheck" onchange="toggleAcceptBtn()">
+                <span class="checkmark"></span>
+                <span class="checkbox-text">I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a>.</span>
+            </label>
+        </div>
+        
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeTermsModal()">Cancel</button>
+            <button id="acceptBtn" class="btn-accept" disabled onclick="acceptAndProceed()">
+                Accept & Launch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:5px; vertical-align:middle;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
         </div>
     </div>
+</div>
 
+    
     <script src="script.js"></script>
 </body>
 </html>
