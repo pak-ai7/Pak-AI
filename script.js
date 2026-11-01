@@ -1,56 +1,63 @@
-// Mobile Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Sab kuch load hone ke baad code chalega
+document.addEventListener('DOMContentLoaded', () => {
     
-    // Hamburger animation (optional)
-    if(navLinks.classList.contains('active')) {
-        hamburger.style.opacity = '0.7';
-    } else {
-        hamburger.style.opacity = '1';
+    // ==========================================
+    // 1. MOBILE MENU LOGIC
+    // ==========================================
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if(hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Jab mobile menu mein kisi link par click ho, toh menu band ho jaye
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
     }
-});
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.style.opacity = '1';
-    });
-});
+    // ==========================================
+    // 2. TERMS MODAL (POPUP) LOGIC
+    // ==========================================
+    
+    const termsModal = document.getElementById('termsModal');
+    const agreeCheck = document.getElementById('agreeCheck');
+    const acceptBtn = document.getElementById('acceptBtn');
 
-// Navbar Shadow on Scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 10) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-});
+    // Popup ko open karne ka function
+    window.openTermsModal = function(event) {
+        if(event) event.preventDefault(); // Link ko default action se roke
+        termsModal.classList.add('show');
+        
+        // Har baar popup khulne par checkbox reset ho jaye aur button disable ho jaye
+        if(agreeCheck && acceptBtn) {
+            agreeCheck.checked = false;
+            acceptBtn.disabled = true;
+        }
+    };
 
-// Simple Scroll Reveal Animation using Intersection Observer
-const revealElements = document.querySelectorAll('.card, .section-header, .about-content, .founder-container');
+    // Popup ko close karne ka function
+    window.closeTermsModal = function() {
+        termsModal.classList.remove('show');
+    };
 
-const revealOptions = {
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
-};
+    // Checkbox check hone par button enable/disable karne ka function
+    window.toggleAcceptBtn = function() {
+        if(agreeCheck && acceptBtn) {
+            // Agar checkbox checked hai toh button enable, warna disable
+            acceptBtn.disabled = !agreeCheck.checked;
+        }
+    };
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-    });
-}, revealOptions);
+    // Accept & Continue par click karne ka function
+    window.acceptAndProceed = function() {
+        // Abhi ke liye hum user ko chat.html par bhej rahe hain
+        // Jab Login page banega, toh 'chat.html' ko 'login.html' kar denge
+        window.location.href = 'chat.html'; 
+    };
 
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-    observer.observe(el);
 });
