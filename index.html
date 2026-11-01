@@ -3,52 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pak AI - Next-Gen Intelligent Agent</title>
+    <title>Pak AI - Advanced Artificial Intelligence Agent</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Modern Tech Font: Inter & Space Grotesk -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Premium, clean and professional fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header / Navbar -->
     <header class="navbar" id="navbar">
-        <div class="logo-container">
-            <!-- Yahan apni logo.png file ka naam daalein -->
-            <img src="logo.png" alt="Pak AI Logo" class="logo-img">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Pak AI Logo">
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Capabilities</a>
+                <a href="#founder">Founder</a>
+                <a href="chat.html" class="btn-launch">Launch Agent</a>
+            </nav>
         </div>
-        <nav class="nav-links">
-            <a href="#home">Overview</a>
-            <a href="#about">About Agent</a>
-            <a href="#features">Capabilities</a>
-            <a href="chat.html" class="btn-nav">Launch Agent</a>
-        </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="badge">Next-Generation AI Agent</div>
-            <h1>Pakistan's Most Advanced <br> <span class="gradient-text">AI Agent</span></h1>
-            <p>Experience the power of intelligent automation. Pak AI is designed to understand, assist, and execute complex tasks seamlessly in Urdu and English.</p>
-            <div class="hero-buttons">
-                <a href="chat.html" class="btn-primary">Start Session</a>
-                <a href="#about" class="btn-secondary">Documentation</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="abstract-shape"></div>
-            <div class="glass-card main-card">
-                <div class="card-header">
-                    <div class="dot red"></div>
-                    <div class="dot yellow"></div>
-                    <div class="dot green"></div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <div class="badge">Next-Generation AI</div>
+                <h1>Pakistan's Most Advanced <br><span class="text-teal">AI Agent</span></h1>
+                <p>Empowering users with intelligent automation, seamless communication in Urdu & English, and enterprise-grade performance. Experience the future of artificial intelligence today.</p>
+                <div class="hero-btns">
+                    <a href="chat.html" class="btn-primary">Start Chatting</a>
+                    <a href="#features" class="btn-secondary">Explore Features</a>
                 </div>
-                <div class="card-body">
-                    <div class="skeleton-line" style="width: 80%;"></div>
-                    <div class="skeleton-line" style="width: 60%;"></div>
-                    <div class="skeleton-line" style="width: 90%;"></div>
-                    <div class="typing-indicator">
-                        <span></span><span></span><span></span>
+                <div class="trust-stats">
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Availability</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Secure</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2</h3>
+                        <p>Languages</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="chat-mockup">
+                    <div class="mockup-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="title">Pak AI Agent</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="msg user-msg">Mujhe coding seekhni hai, kahan se shuru karun?</div>
+                        <div class="msg ai-msg">
+                            <span class="ai-icon">P</span>
+                            <p>Bilkul! Main aapki madad kar sakta hoon. Shuru karne ke liye Python seekhein, kyunke yeh beginners ke liye best hai. Kya aap chahte hain main aapko ek roadmap doon?</p>
+                        </div>
+                        <div class="typing">
+                            <span></span><span></span><span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,52 +86,94 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="section-container">
-            <h2 class="section-title">What is <span class="text-teal">Pak AI</span>?</h2>
-            <p class="section-desc">Pak AI is a state-of-the-art AI Agent built to empower individuals and businesses. Unlike standard chatbots, our agent can process complex instructions, generate code, analyze data, and communicate naturally in both Urdu and English. Built with cutting-edge LLM technology.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span class="text-navy">Pak AI</span></h2>
+                <p>Built with cutting-edge LLM technology to serve Pakistan and beyond.</p>
+            </div>
+            <div class="about-content">
+                <p>Pak AI is not just a chatbot; it is a highly capable AI agent designed to understand complex queries, generate code, translate languages, and automate tasks. Whether you are a student, a developer, or a business owner, Pak AI adapts to your needs with human-like understanding and machine-level precision.</p>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2 class="section-title">Core <span class="text-navy">Capabilities</span></h2>
-        <div class="features-grid">
-            
-            <!-- Feature 1 -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                </div>
-                <h3>Bilingual Processing</h3>
-                <p>Seamlessly interact in English or Urdu. The agent understands context and responds with native-level fluency.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Core <span class="text-teal">Capabilities</span></h2>
+                <p>Engineered for performance, accuracy, and security.</p>
             </div>
-
-            <!-- Feature 2 -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <div class="grid-3">
+                <!-- Feature 1 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3>Bilingual Mastery</h3>
+                    <p>Communicates flawlessly in both English and Urdu. It understands the cultural context and responds naturally, making it perfect for Pakistani users.</p>
                 </div>
-                <h3>High-Speed Inference</h3>
-                <p>Powered by ultra-fast cloud infrastructure to deliver real-time responses with zero latency.</p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="feature-card">
-                <div class="icon-wrapper">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <!-- Feature 2 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3>High-Speed Inference</h3>
+                    <p>Powered by optimized cloud architecture to provide instantaneous responses. No waiting, no lag. Just pure, uninterrupted productivity.</p>
                 </div>
-                <h3>Enterprise Security</h3>
-                <p>Your data is encrypted end-to-end. We prioritize user privacy and secure intelligence protocols.</p>
+                <!-- Feature 3 -->
+                <div class="card">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Your data is private. Pak AI uses advanced encryption protocols to ensure that your conversations and queries remain completely confidential.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Founder Section -->
+    <section id="founder" class="founder-section">
+        <div class="container founder-container">
+            <div class="founder-image-wrapper">
+                <img src="founder.png" alt="Mukesh Heerani" class="founder-img">
+                <div class="founder-badge">Founder</div>
+            </div>
+            <div class="founder-info">
+                <h2>Mukesh Heerani</h2>
+                <h4 class="alias">Known as "Prince Hyderabadi"</h4>
+                <p class="bio">
+                    A visionary tech entrepreneur and 3rd-year Mathematics student at the University of Sindh. Hailing from Hyderabad, Sindh, Mukesh is a proud Sindhi innovator dedicated to building world-class digital solutions.
+                </p>
+                <div class="ventures">
+                    <h5>Founder Of:</h5>
+                    <div class="venture-tags">
+                        <span>Nova AI</span>
+                        <span>Apex Learning Academy</span>
+                        <span>Vora</span>
+                        <span>My Social</span>
+                        <span>The Browser</span>
+                        <span>Voxo Studio</span>
+                        <span>Alfaaz</span>
+                        <span>Nova Assistant</span>
+                        <span>SU Connect</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <img src="logo.png" alt="Pak AI Logo" class="footer-logo">
-            <p>&copy; 2026 Pak AI. Engineering the future of intelligence.</p>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <img src="logo.png" alt="Pak AI" class="footer-logo">
+                <p>Engineering the future of intelligence in Pakistan.</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Pak AI. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
