@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.acceptAndProceed = function() {
         // Abhi ke liye hum user ko chat.html par bhej rahe hain
         // Jab Login page banega, toh 'chat.html' ko 'login.html' kar denge
-        window.location.href = 'chat.html'; 
+        window.location.href = 'login.html'; 
     };
 
 });
